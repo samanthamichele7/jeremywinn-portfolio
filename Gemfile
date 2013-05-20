@@ -17,9 +17,14 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+  gem "compass-rails", ">= 1.0.3"
+  gem "zurb-foundation", ">= 4.0.9"
 end
 
 gem 'jquery-rails'
+gem "simple_form", ">= 2.1.0"
+gem "figaro", ">= 0.6.3"
+gem "high_voltage"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -36,23 +41,29 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
-gem "pg", ">= 0.15.0"
-gem "rspec-rails", ">= 2.12.2", :group => [:development, :test]
-gem "capybara", ">= 2.0.3", :group => :test
-gem "database_cleaner", ">= 1.0.0.RC1", :group => :test
-gem "email_spec", ">= 1.4.0", :group => :test
-gem "guard-bundler", ">= 1.0.0", :group => :development
-gem "guard-rails", ">= 0.4.0", :group => :development
-gem "guard-rspec", ">= 2.5.2", :group => :development
+group :development, :test do
+  gem 'sqlite3', '1.3.5'
+  gem 'annotate'
+  gem "rspec-rails", ">= 2.12.2"
+  gem "capybara", ">= 2.0.3"
+  gem "database_cleaner", ">= 1.0.0.RC1"
+  gem "email_spec", ">= 1.4.0"
+  gem "guard-bundler", ">= 1.0.0"
+  gem "guard-rails", ">= 0.4.0"
+  gem "guard-rspec", ">= 2.5.2"
+  gem "factory_girl_rails", ">= 4.2.0"
+  gem "quiet_assets", ">= 1.0.2"
+  gem "better_errors", ">= 0.7.2"
+end
+
+group :production do
+  gem 'pg', '0.12.2'
+end
+
 gem "rb-inotify", ">= 0.9.0", :group => :development, :require => false
 gem "rb-fsevent", ">= 0.9.3", :group => :development, :require => false
 gem "rb-fchange", ">= 0.0.6", :group => :development, :require => false
-gem "factory_girl_rails", ">= 4.2.0", :group => [:development, :test]
-gem "compass-rails", ">= 1.0.3", :group => :assets
-gem "zurb-foundation", ">= 4.0.9", :group => :assets
-gem "simple_form", ">= 2.1.0"
-gem "quiet_assets", ">= 1.0.2", :group => :development
-gem "figaro", ">= 0.6.3"
-gem "better_errors", ">= 0.7.2", :group => :development
+
+
 gem "binding_of_caller", ">= 0.7.1", :group => :development, :platforms => [:mri_19, :rbx]
 gem "hub", ">= 1.10.2", :require => nil, :group => [:development]
