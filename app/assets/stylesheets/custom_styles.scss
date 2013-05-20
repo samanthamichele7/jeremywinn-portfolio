@@ -1,0 +1,31 @@
+$dun: #594F4F;
+$grayBlue: #547980;
+$greenBlue: #45ADA8;
+$mint: #9DE0AD;
+$yellowGreen: #E5FCC2;
+$spinnaker: 'Spinnaker', sans-serif;
+
+body {
+  background: url("linedpaper.png");
+}
+
+header {
+  background: $dun;
+  padding: 1.2em 0;
+  margin-bottom: 2.2em;
+  h1 {
+  	color: white;
+  	font-family: $spinnaker;
+  }
+}
+
+.contain-to-grid .top-bar { // Add spacing between header and content
+  margin-bottom: 0em;
+}
+
+table thead {
+  background: $grayBlue;
+  tr td {
+  	color: white;
+  }
+}

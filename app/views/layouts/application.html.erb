@@ -15,17 +15,20 @@
 
   	<title><%= content_for?(:title) ? yield(:title) : "Jeremy Winn Portfolio" %></title>
 
+    <link href='http://fonts.googleapis.com/css?family=Spinnaker' rel='stylesheet' type='text/css'>
   	<%= stylesheet_link_tag    "application" %>
   	<%= javascript_include_tag "vendor/custom.modernizr" %>
     <%= csrf_meta_tags %>
   </head>
 
   <body>
-  	<%= render 'layouts/navigation' %>
-
-    <%= yield %>
+    <div class="content">
+  	  <%= render 'layouts/navigation' %>
+  
+      <%= yield %>
 
     
-    <%= javascript_include_tag "application" %>
+      <%= javascript_include_tag "application" %>
+    </div>
   </body>
 </html>

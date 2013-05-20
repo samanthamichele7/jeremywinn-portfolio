@@ -31,6 +31,18 @@ describe "StaticPages" do
   describe "Outside expertise page" do
   	before { visit outside_expertise_path }
 
-  	it { should have_content('Outside Expertise') }
+  	it { should have_content('Outside Area of Expertise') }
+  end
+
+  describe "Research and writing page" do
+  	before { visit research_and_writing_path }
+
+  	it { should have_content('Research and Writing') }
+  end
+
+  describe "Teaching page" do
+  	before { visit teaching_path }
+
+  	it { should have_content('Teaching') }
   end
 end
