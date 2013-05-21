@@ -1,5 +1,12 @@
 JeremyPortfolio::Application.routes.draw do
 
+  devise_for :admins
+
+  devise_scope :admin do
+    get "login" => "devise/sessions#new", :id => 'sign_in'
+    get "logout" => "devise/sessions#destroy", :id => 'sign_out'
+  end
+
 get 'home' => 'high_voltage/pages#show', :id => 'home'
 get 'about' => 'high_voltage/pages#show', :id => 'about'
 get 'personal_statement' => 'high_voltage/pages#show', :id => 'personal_statement'
