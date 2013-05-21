@@ -37,4 +37,6 @@ JeremyPortfolio::Application.configure do
 
   consider_all_requests_local = false
   config.action_dispatch.show_exceptions = true
+  
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 end

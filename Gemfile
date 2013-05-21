@@ -25,6 +25,7 @@ gem 'jquery-rails'
 gem "simple_form", ">= 2.1.0"
 gem "figaro", ">= 0.6.3"
 gem "high_voltage"
+gem 'devise'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
