@@ -34,4 +34,7 @@ JeremyPortfolio::Application.configure do
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
+
+  consider_all_requests_local = false
+  config.action_dispatch.show_exceptions = true
 end

@@ -1,5 +1,8 @@
 JeremyPortfolio::Application.routes.draw do
 
+  resources :posts
+
+
 get 'home' => 'high_voltage/pages#show', :id => 'home'
 get 'about' => 'high_voltage/pages#show', :id => 'about'
 get 'personal_statement' => 'high_voltage/pages#show', :id => 'personal_statement'

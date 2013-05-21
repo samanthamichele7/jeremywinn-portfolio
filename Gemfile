@@ -54,6 +54,7 @@ group :development, :test do
   gem "factory_girl_rails", ">= 4.2.0"
   gem "quiet_assets", ">= 1.0.2"
   gem "better_errors", ">= 0.7.2"
+  gem 'shoulda-matchers'
 end
 
 group :production do
