@@ -29,6 +29,7 @@ describe Admin do
   it { should respond_to(:email) }
   it { should respond_to(:password) }
   it { should respond_to(:password_confirmation) }
+  it { should respond_to(:posts) }
 
   describe "when email is not present" do
     before { @admin.email = " " }
@@ -87,5 +88,27 @@ describe Admin do
   	it { should_not be_valid }
   end
 
-  
+  describe "post associations" do
+  	before { @admin.save }
+  	let!(:older_post) do
+  	  FactoryGirl.create(:post, admin: @admin, created_at: 1.day.ago)
+  	end
+  	let!(:newer_post) do
+  	  FactoryGirl.create(:post, admin: @admin, created_at: 1.month.ago)
+  	end
+
+  	it "should display posts in correct order" do
+  	  @admin.posts.should == [newer_post, older_post]
+  	end
+
+  	it "should destroy associated posts" do
+  	  posts = @admin.posts.dup
+  	  @admin.destroy
+  	  posts.should_not be_empty
+  	  posts.each do |post|
+  	    Post.find_by_id(post.id).should be_nil
+  	  end
+  	end
+  end  
+
 end

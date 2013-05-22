@@ -1,0 +1,35 @@
+<header>
+  <div class="row">
+    <h1>Blog</h1>
+  </div>
+</header>
+<div class="row"> 
+  <% @posts.reverse_each do |post| %>
+
+    <div class="row">
+    	<div class="large-3 columns">
+    		<br />
+    		<p>Posted <%= post.created_at.strftime("%F") %></p>
+    		<a href="<%= post_url(post) + '#disqus_thread'%>">View Comments</a>
+      </div>
+    	
+      <div class="large-9 columns">
+        <h3><%= link_to post.title, post %></td></h3>
+        <p><%= post.content.html_safe %></p>
+
+  	    <% if current_admin %>  
+  	      <%= link_to 'Edit', edit_post_path(post) %></td>
+  	      <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  	    <% end %>
+  	  </div>
+
+     </div>
+     <br />
+  <% end %>
+
+  <br />
+
+  <% if current_admin %>
+    <%= link_to 'New Post', new_post_path %>
+  <% end %>
+</div>

@@ -7,6 +7,8 @@ JeremyPortfolio::Application.routes.draw do
     get "logout" => "devise/sessions#destroy", :id => 'sign_out'
   end
 
+  resources :posts
+
 get 'home' => 'high_voltage/pages#show', :id => 'home'
 get 'about' => 'high_voltage/pages#show', :id => 'about'
 get 'personal_statement' => 'high_voltage/pages#show', :id => 'personal_statement'
