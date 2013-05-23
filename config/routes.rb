@@ -16,6 +16,8 @@ get 'health_education_and_promotion' => 'high_voltage/pages#show', :id => 'healt
 get 'outside_expertise' => 'high_voltage/pages#show', :id => 'outside_expertise'
 get 'research_and_writing' => 'high_voltage/pages#show', :id => 'research_and_writing'
 get 'teaching' => 'high_voltage/pages#show', :id => 'teaching'
+get 'professional_service' => 'high_voltage/pages#show', :id => 'professional_service'
+get 'resume' => 'high_voltage/pages#show', :id => 'resume'
 
 root :to => 'high_voltage/pages#show', :id => 'home'
 end

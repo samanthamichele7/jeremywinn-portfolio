@@ -20,6 +20,10 @@ header {
   }
 }
 
+h4 {
+  padding-top: 2em;
+}
+
 .contain-to-grid .top-bar { // Add spacing between header and content
   margin-bottom: 0em;
 }
@@ -32,5 +36,8 @@ table thead {
 }
 
 .section-container > section > .title a {
-  white-space: normal;
-} 
+  white-space: normal !important;
+  &:hover {
+    background: #ccc;
+  }
+}
