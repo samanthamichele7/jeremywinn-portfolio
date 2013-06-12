@@ -1,14 +1,16 @@
 ---
 jeremy-pic.jpg: jeremy-pic-85bcf4d406fedd498a8659a046607a93.jpg
 jeremy-pic/index.jpg: jeremy-pic-85bcf4d406fedd498a8659a046607a93.jpg
+jw-bg.jpg: jw-bg-b6dc00733c346175cfb469b59594b5a4.jpg
+jw-bg/index.jpg: jw-bg-b6dc00733c346175cfb469b59594b5a4.jpg
 linedpaper.png: linedpaper-06b034f6d337bed51676e384edb31753.png
 linedpaper/index.png: linedpaper-06b034f6d337bed51676e384edb31753.png
 rails.png: rails-a3386665c05a2d82f711a4aaa72d247c.png
 rails/index.png: rails-a3386665c05a2d82f711a4aaa72d247c.png
-application.js: application-68697aa57ad89920aec6a375a93969a9.js
-application/index.js: application-68697aa57ad89920aec6a375a93969a9.js
-application.css: application-03145fddb6533d4d608b7867f7ff200e.css
-application/index.css: application-03145fddb6533d4d608b7867f7ff200e.css
+application.js: application-338cd01e52045724e5a8de40cc112c71.js
+application/index.js: application-338cd01e52045724e5a8de40cc112c71.js
+application.css: application-d9d385ff0dfc055a8dc73e6841881bb4.css
+application/index.css: application-d9d385ff0dfc055a8dc73e6841881bb4.css
 jquery.min.map: jquery.min-6c267bfd2b3f36e6edccb2e584934c1c.map
 jquery/index.min.map: jquery.min-6c267bfd2b3f36e6edccb2e584934c1c.map
 vendor/custom.modernizr.js: vendor/custom.modernizr-5e8eab1bb829a113a74568d53df0f0c8.js
