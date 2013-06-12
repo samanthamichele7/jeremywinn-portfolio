@@ -17,6 +17,7 @@
 
     <link href='http://fonts.googleapis.com/css?family=Spinnaker' rel='stylesheet' type='text/css'>
   	<%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application" %>
   	<%= javascript_include_tag "vendor/custom.modernizr" %>
     <%= csrf_meta_tags %>
   </head>
@@ -30,7 +31,7 @@
       <%= yield %>
 
     
-      <%= javascript_include_tag "application" %>
+      
     </div>
     <script type="text/javascript">
       /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
